@@ -788,3 +788,113 @@ img {
         right: 20px;
     }
 }
+
+/* ===========================
+   PORTFÓLIO — REELS GRID
+=========================== */
+.portfolio__subtitulo {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--gray-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-top: -2.5rem;
+    margin-bottom: 3rem;
+}
+
+.reels-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.reel-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.reel-card__thumb {
+    position: relative;
+    aspect-ratio: 9 / 16;
+    background: linear-gradient(135deg, #2D3A30 0%, #3d4f40 100%);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reel-card:hover .reel-card__thumb {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.reel-card__logo {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.2);
+    transition: opacity 0.3s ease;
+}
+
+.reel-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(232, 162, 162, 0.0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.reel-card__overlay i {
+    font-size: 2rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
+}
+
+.reel-card:hover .reel-card__overlay {
+    background: rgba(232, 162, 162, 0.35);
+}
+
+.reel-card:hover .reel-card__overlay i {
+    opacity: 1;
+}
+
+.reel-card:hover .reel-card__logo {
+    opacity: 0.1;
+}
+
+.reel-card__label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    color: var(--gray-muted);
+    text-align: center;
+}
+
+/* Grid responsivo */
+@media (min-width: 480px) {
+    .reels-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .reels-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .reels-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

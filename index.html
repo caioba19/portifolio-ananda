@@ -9,12 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Plus+Jakarta+Sans:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="shortcut icon" href="img/unnamed.jpg" type="image/x-icon">
 </head>
 <body>
 
     <!-- Botão WhatsApp Fixo -->
-    <a href="https://wa.me/5571982601816?text=Olá,%20Ananda.%20Tenho%20interesse%20em%20saber%20mais%20sobre%20seu%20trabalho." target="_blank" class="wa-float">
+    <a href="https://wa.me/5571982601816?text=Olá,%20Ananda.%20Tenho%20interesse%20em%20saber%20mais%20sobre%20seu%20trabalho." target="_blank" class="wa-float"></a>
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -26,7 +25,7 @@
             <a href="#sobre" class="nav__link">Sobre</a>
             <a href="#servicos" class="nav__link">Serviços</a>
             <a href="#portfolio" class="nav__link">Portfólio</a>
-            <a href="#contato" class="nav__link nav__link--active">Contato</a>
+            <a href="#contato" class="nav__link nav__link--active">Contacto</a>
         </div>
         <button id="menu-toggle" class="nav__toggle" aria-label="Abrir menu">
             <i class="fas fa-bars" id="menu-icon"></i>
@@ -61,8 +60,13 @@
     <section id="sobre" class="section-sobre">
         <div class="sobre__container">
             <div class="reveal">
+                <!-- 
+                    ⚠️ ATENÇÃO: coloca o nome exato da tua foto aqui.
+                    O arquivo deve estar na mesma pasta que o index.html.
+                    Exemplo: src="foto.png" ou src="foto.jpg"
+                -->
                 <div class="sobre__foto-wrap">
-                    <img src="img/nanda1.jpg" alt="" class="sobre__foto">
+                    <img src="foto.png" alt="Ananda Lima" class="sobre__foto">
                 </div>
             </div>
             <div class="reveal sobre__texto">
@@ -71,12 +75,13 @@
                     Sou estudante de <span class="sobre__destaque-bold">Publicidade e Propaganda</span> e atuo com criação de conteúdo e gestão de redes sociais.
                 </p>
                 <p class="sobre__descricao">
-                    Desenvolvo projetos em diferentes nichos e exploro estratégias que conectam marcas ao seu público de forma autêntica e memorável.
-                    Estou em constante evolução, explorando novas ideias e formatos para construir conteúdos que realmente geram conexão e presença digital.
+                    Desenvolvo projetos em diferentes nichos e exploro estratégias que conectam marcas ao seu público de forma autêntica e memorável. 
+                    Atualmente focada em elevar o patamar visual de marcas fitness e lifestyle. Estou em constante evolução, explorando novas ideias e 
+                    formatos para construir conteúdos que realmente geram conexão e presença digital.
                 </p>
                 <div class="sobre__sociais">
-                    <a href="https://www.instagram.com/nandalima.pp/" class="sobre__social-link" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/ananda-lima-537756297/" class="sobre__social-link" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="sobre__social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="sobre__social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
@@ -118,28 +123,106 @@
     <!-- 4. PORTFÓLIO -->
     <section id="portfolio" class="section-portfolio">
         <div class="portfolio__container">
-            <h2 class="portfolio__titulo">O Coração do Site</h2>
-            <div class="portfolio__lista">
-                <div class="project-card reveal">
-                    <div class="project-card__media">
-                        <i class="fas fa-play project-card__icon"></i>
+            <h2 class="portfolio__titulo">Portfólio</h2>
+            <p class="portfolio__subtitulo">Clica em qualquer card para assistir o reel</p>
+            <div class="reels-grid reveal">
+
+                <a href="https://www.instagram.com/reel/DP1btQkEc1A/?igsh=MThpc3AzaWk0a2ZzOA==" target="_blank" class="reel-card">
+                    <div class="reel-card__thumb">
+                        <i class="fab fa-instagram reel-card__logo"></i>
+                        <div class="reel-card__overlay"><i class="fas fa-play"></i></div>
                     </div>
-                    <div class="project-card__info">
-                        <span class="project-card__tag">Case: Audiovisual</span>
-                        <h3 class="project-card__nome">Cobertura de Corrida</h3>
-                        <div class="project-card__detalhes">
-                            <p><strong>Objetivo:</strong> Engajamento em tempo real.</p>
-                            <p><strong>Estratégia:</strong> Vídeos dinâmicos + stories contínuos.</p>
-                            <p class="project-card__resultado"><strong>Resultado:</strong> Aumento orgânico de interação.</p>
-                        </div>
+                    <p class="reel-card__label">Reel 01</p>
+                </a>
+
+                <a href="https://www.instagram.com/reel/DR2ENw6kZcR/?igsh=MTQxdGZ5cjVuM25kMA==" target="_blank" class="reel-card">
+                    <div class="reel-card__thumb">
+                        <i class="fab fa-instagram reel-card__logo"></i>
+                        <div class="reel-card__overlay"><i class="fas fa-play"></i></div>
                     </div>
-                </div>
-                <div class="galeria reveal">
-                    <div class="galeria__item">Reels Produzido</div>
-                    <div class="galeria__item">Stories Narrativos</div>
-                    <div class="galeria__item">Post Carrossel</div>
-                    <div class="galeria__item">Feed Estético</div>
-                </div>
+                    <p class="reel-card__label">Reel 02</p>
+                </a>
+
+                <a href="https://www.instagram.com/reel/DTk6E5-EdBY/?igsh=dHIyY2IwdTI1Yzhu" target="_blank" class="reel-card">
+                    <div class="reel-card__thumb">
+                        <i class="fab fa-instagram reel-card__logo"></i>
+                        <div class="reel-card__overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <p class="reel-card__label">Reel 03</p>
+                </a>
+
+                <a href="https://www.instagram.com/reel/DRCWSX8jeiS/?igsh=MTFlMWRvZHhsbnV6Ng==" target="_blank" class="reel-card">
+                    <div class="reel-card__thumb">
+                        <i class="fab fa-instagram reel-card__logo"></i>
+                        <div class="reel-card__overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <p class="reel-card__label">Reel 04</p>
+                </a>
+
+                <a href="https://www.instagram.com/reel/DP2AoLBD_rV/?igsh=MXRjMGZzbjZmYjJneQ==" target="_blank" class="reel-card">
+                    <div class="reel-card__thumb">
+                        <i class="fab fa-instagram reel-card__logo"></i>
+                        <div class="reel-card__overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <p class="reel-card__label">Reel 05</p>
+                </a>
+
+                <a href="https://www.instagram.com/reel/DPgsjr9DaQp/?igsh=ZzI1bTRreWVsMmNy" target="_blank" class="reel-card">
+                    <div class="reel-card__thumb">
+                        <i class="fab fa-instagram reel-card__logo"></i>
+                        <div class="reel-card__overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <p class="reel-card__label">Reel 06</p>
+                </a>
+
+                <a href="https://www.instagram.com/reel/DPCi6nFD8YM/?igsh=OWppdG1kc2djY204" target="_blank" class="reel-card">
+                    <div class="reel-card__thumb">
+                        <i class="fab fa-instagram reel-card__logo"></i>
+                        <div class="reel-card__overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <p class="reel-card__label">Reel 07</p>
+                </a>
+
+                <a href="https://www.instagram.com/reel/DN3a5aNWuPy/?igsh=NWF0aWthc283cmFu" target="_blank" class="reel-card">
+                    <div class="reel-card__thumb">
+                        <i class="fab fa-instagram reel-card__logo"></i>
+                        <div class="reel-card__overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <p class="reel-card__label">Reel 08</p>
+                </a>
+
+                <a href="https://www.instagram.com/reel/DPhiJdvjeGv/?igsh=MXRoYmQwbDlxNWYwYw==" target="_blank" class="reel-card">
+                    <div class="reel-card__thumb">
+                        <i class="fab fa-instagram reel-card__logo"></i>
+                        <div class="reel-card__overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <p class="reel-card__label">Reel 09</p>
+                </a>
+
+                <a href="https://www.instagram.com/reel/DPM7v8jDYed/?igsh=MTl4a3ZiamJvczFkcA==" target="_blank" class="reel-card">
+                    <div class="reel-card__thumb">
+                        <i class="fab fa-instagram reel-card__logo"></i>
+                        <div class="reel-card__overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <p class="reel-card__label">Reel 10</p>
+                </a>
+
+                <a href="https://www.instagram.com/reel/DO9cgxGD5xR/?igsh=MTcweGl1NXZ4Ymh0aQ==" target="_blank" class="reel-card">
+                    <div class="reel-card__thumb">
+                        <i class="fab fa-instagram reel-card__logo"></i>
+                        <div class="reel-card__overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <p class="reel-card__label">Reel 11</p>
+                </a>
+
+                <a href="https://www.instagram.com/reel/DOoytFzj3kv/?igsh=Mmg4bzd2amVoZm4w" target="_blank" class="reel-card">
+                    <div class="reel-card__thumb">
+                        <i class="fab fa-instagram reel-card__logo"></i>
+                        <div class="reel-card__overlay"><i class="fas fa-play"></i></div>
+                    </div>
+                    <p class="reel-card__label">Reel 12</p>
+                </a>
+
             </div>
         </div>
     </section>
@@ -175,17 +258,18 @@
             <h2 class="footer__nome">Ananda Lima</h2>
             <p class="footer__cta">Vamos elevar a tua marca?</p>
             <div class="footer__contatos">
-                <a href="mailto:limaananda.pp@gmail.com" class="footer__email">limaananda.pp@gmail.com</a>
+                <a href="mailto:limaananda.pp@gmail.com" target="_blank" class="footer__email">limaananda.pp@gmail.com</a>
                 <p class="footer__cidade">Salvador, BA</p>
             </div>
             <div class="footer__links">
-                <a href="https://wa.me5571982601816?text=Olá,%20Ananda.%20Tenho%20interesse%20em%20saber%20mais%20sobre%20seu%20trabalho." target="_blank" class="footer__link">WhatsApp</a>
+                <a href="https://wa.me/5571982601816?text=Olá,%20Ananda.%20Tenho%20interesse%20em%20saber%20mais%20sobre%20seu%20trabalho." target="_blank" class="footer__link">WhatsApp</a>
                 <a href="https://www.instagram.com/nandalima.pp/" target="_blank" class="footer__link">Instagram</a>
                 <a href="https://www.linkedin.com/in/ananda-lima-537756297/" target="_blank" class="footer__link">LinkedIn</a>
             </div>
             <div class="footer__copy">© 2024 Design Editorial & Estratégico</div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
