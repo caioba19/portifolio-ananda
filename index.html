@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ananda Lima | Publicidade & Conteúdo</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Plus+Jakarta+Sans:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="shortcut icon" href="img/unnamed.jpg" type="image/x-icon">
 </head>
 <body>
 
@@ -26,7 +26,7 @@
             <a href="#sobre" class="nav__link">Sobre</a>
             <a href="#servicos" class="nav__link">Serviços</a>
             <a href="#portfolio" class="nav__link">Portfólio</a>
-            <a href="#contato" class="nav__link nav__link--active">Contato</a>
+            <a href="#contato" class="nav__link nav__link--active">Contacto</a>
         </div>
         <button id="menu-toggle" class="nav__toggle" aria-label="Abrir menu">
             <i class="fas fa-bars" id="menu-icon"></i>
@@ -39,7 +39,7 @@
         <a href="#sobre" class="mobile-menu__link mobile-link">Sobre</a>
         <a href="#servicos" class="mobile-menu__link mobile-link">Serviços</a>
         <a href="#portfolio" class="mobile-menu__link mobile-link">Portfólio</a>
-        <a href="#contato" class="mobile-menu__link mobile-menu__link--active mobile-link">Contato</a>
+        <a href="#contato" class="mobile-menu__link mobile-menu__link--active mobile-link">Contacto</a>
     </div>
 
     <!-- 1. HOME -->
@@ -62,7 +62,7 @@
         <div class="sobre__container">
             <div class="reveal">
                 <div class="sobre__foto-wrap">
-                    <img src="img/nanda1.jpg" alt="" class="sobre__foto">
+                    <img src="img/nanda1.jpg" alt="Ananda Lima" class="sobre__foto">
                 </div>
             </div>
             <div class="reveal sobre__texto">
@@ -71,12 +71,13 @@
                     Sou estudante de <span class="sobre__destaque-bold">Publicidade e Propaganda</span> e atuo com criação de conteúdo e gestão de redes sociais.
                 </p>
                 <p class="sobre__descricao">
-                    Desenvolvo projetos em diferentes nichos e exploro estratégias que conectam marcas ao seu público de forma autêntica e memorável. 
-                    Estou em constante evolução, explorando novas ideias e formatos para construir conteúdos que realmente geram conexão e presença digital.
+                    Desenvolvo projetos em diferentes nichos e exploro estratégias que conectam marcas ao seu público de forma autêntica e memorável.
+                    Atualmente focada em elevar o patamar visual de marcas fitness e lifestyle. Estou em constante evolução, explorando novas ideias e
+                    formatos para construir conteúdos que realmente geram conexão e presença digital.
                 </p>
                 <div class="sobre__sociais">
-                    <a href="https://www.instagram.com/nandalima.pp/" class="sobre__social-link" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/ananda-lima-537756297/" class="sobre__social-link" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/nandalima.pp/" target="_blank" class="sobre__social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="sobre__social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
@@ -115,31 +116,294 @@
         </div>
     </section>
 
-    <!-- 4. PORTFÓLIO -->
+    <!-- 4. PORTFÓLIO com filtros -->
     <section id="portfolio" class="section-portfolio">
         <div class="portfolio__container">
-            <h2 class="portfolio__titulo">O Coração do Site</h2>
-            <div class="portfolio__lista">
-                <div class="project-card reveal">
-                    <div class="project-card__media">
-                        <i class="fas fa-play project-card__icon"></i>
-                    </div>
-                    <div class="project-card__info">
-                        <span class="project-card__tag">Case: Audiovisual</span>
-                        <h3 class="project-card__nome">Cobertura de Corrida</h3>
-                        <div class="project-card__detalhes">
-                            <p><strong>Objetivo:</strong> Engajamento em tempo real.</p>
-                            <p><strong>Estratégia:</strong> Vídeos dinâmicos + stories contínuos.</p>
-                            <p class="project-card__resultado"><strong>Resultado:</strong> Aumento orgânico de interação.</p>
+            <h2 class="portfolio__titulo">Portfólio</h2>
+            <p class="portfolio__subtitulo">Produções audiovisuais</p>
+
+            <!-- Filtros -->
+            <div class="filtros">
+                <button class="filtro-btn active" onclick="filterGallery('all', this)">Todos</button>
+                <button class="filtro-btn" onclick="filterGallery('sports', this)">Sports</button>
+                <button class="filtro-btn" onclick="filterGallery('social', this)">Social</button>
+                <button class="filtro-btn" onclick="filterGallery('branding', this)">Business</button>
+                <button class="filtro-btn" onclick="filterGallery('trends', this)">Trends</button>
+            </div>
+
+            <!-- Grade de vídeos -->
+            <div class="videos-filtro-grid" id="gallery">
+
+                <div class="portfolio-item sports" data-category="sports">
+                    <div class="video-container">
+                        <video src="img/video1.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Sports</span>
+                            <h4 class="video-overlay__titulo">Cobertura de Corrida</h4>
                         </div>
                     </div>
                 </div>
-                <div class="galeria reveal">
-                    <div class="galeria__item">Reels Produzido</div>
-                    <div class="galeria__item">Stories Narrativos</div>
-                    <div class="galeria__item">Post Carrossel</div>
-                    <div class="galeria__item">Feed Estético</div>
+
+                <div class="portfolio-item sports" data-category="sports">
+                    <div class="video-container">
+                        <video src="img/video2.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Sports</span>
+                            <h4 class="video-overlay__titulo">Caminhada Coletiva</h4>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="portfolio-item social" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video3.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Eventos</span>
+                            <h4 class="video-overlay__titulo">Confraternização Corporativa</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item social" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video4.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Cobertura de Aniversário</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item social" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video5.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Formatura</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item branding" data-category="branding">
+                    <div class="video-container">
+                        <video src="img/video6.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Business</span>
+                            <h4 class="video-overlay__titulo">Depoimentos de Clientes</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item branding" data-category="branding">
+                    <div class="video-container">
+                        <video src="img/video7.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Business</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item trends" data-category="trends">
+                    <div class="video-container">
+                        <video src="img/video8.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Trends</span>
+                            <h4 class="video-overlay__titulo">Trends do Momento</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item trends sports" data-category="trends">
+                    <div class="video-container">
+                        <video src="img/video9.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Sports / Trends</span>
+                            <h4 class="video-overlay__titulo">Trend de Corrida</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item trends" data-category="trends">
+                    <div class="video-container">
+                        <video src="img/video10.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Trends</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video11.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video12.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video13.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video14.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video15.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video16.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video17.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video18.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video19.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video20.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video21.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video22.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video23.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video24.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video25.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video26.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="social">
+                    <div class="video-container">
+                        <video src="img/video27.mp4" controls playsinline preload="auto"></video>
+                        <div class="video-overlay">
+                            <span class="video-overlay__tag">Social</span>
+                            <h4 class="video-overlay__titulo">Título do Vídeo</h4>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -181,11 +445,12 @@
             <div class="footer__links">
                 <a href="https://wa.me/5571982601816?text=Olá,%20Ananda.%20Tenho%20interesse%20em%20saber%20mais%20sobre%20seu%20trabalho." target="_blank" class="footer__link">WhatsApp</a>
                 <a href="https://www.instagram.com/nandalima.pp/" target="_blank" class="footer__link">Instagram</a>
-                <a href="https://www.linkedin.com/in/ananda-lima-537756297/" target="_blank" class="footer__link">LinkedIn</a>
+                <a href=https://www.linkedin.com/in/ananda-lima-537756297/" target="_blank" class="footer__link">LinkedIn</a>
             </div>
             <div class="footer__copy">© 2024 Design Editorial & Estratégico</div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
