@@ -28,7 +28,6 @@ toggle.addEventListener('click', function () {
     menuIcon.classList.toggle('fa-xmark');
 });
 
-// Fecha ao clicar num link
 document.querySelectorAll('.mobile-link').forEach(function (link) {
     link.addEventListener('click', function () {
         mobileMenu.classList.remove('open');
@@ -37,7 +36,6 @@ document.querySelectorAll('.mobile-link').forEach(function (link) {
     });
 });
 
-// Fecha ao redimensionar para desktop
 window.addEventListener('resize', function () {
     if (window.innerWidth >= 768) {
         mobileMenu.classList.remove('open');
@@ -48,18 +46,10 @@ window.addEventListener('resize', function () {
 
 // ===========================
 // PAUSA AUTOMÁTICA DE VÍDEOS
-// Quando um vídeo começa, pausa todos os outros
 // ===========================
 window.addEventListener('load', function () {
     var videos = document.querySelectorAll('video');
-
     videos.forEach(function (video) {
-        // Carrega o primeiro frame visível
-        video.addEventListener('loadedmetadata', function () {
-            video.currentTime = 0.1;
-        });
-
-        // Pausa os outros ao dar play
         video.addEventListener('play', function () {
             videos.forEach(function (outro) {
                 if (outro !== video && !outro.paused) {
@@ -70,25 +60,25 @@ window.addEventListener('load', function () {
     });
 });
 
-
 // ===========================
 // FILTRO DO PORTFÓLIO
 // ===========================
-function filterGallery(category, btnClicado) {
+function filterGallery(category, btn) {
     // Atualiza botões
-    document.querySelectorAll('.filtro-btn').forEach(function(btn) {
-        btn.classList.remove('active');
+    document.querySelectorAll('.filtro-btn').forEach(function (b) {
+        b.classList.remove('active');
     });
-    btnClicado.classList.add('active');
+    btn.classList.add('active');
 
     // Filtra itens
-    document.querySelectorAll('.portfolio-item').forEach(function(item) {
-        var itemCategory = item.getAttribute('data-category');
-        if (category === 'all' || itemCategory.includes(category)) {
-            item.classList.remove('hidden');
+    document.querySelectorAll('.portfolio-item').forEach(function (item) {
+        var cat = item.getAttribute('data-category');
+        var mostrar = category === 'all' || cat === category || cat.includes(category);
+
+        if (mostrar) {
+            item.style.display = '';
         } else {
-            item.classList.add('hidden');
-            // Pausa vídeo ao esconder
+            item.style.display = 'none';
             var video = item.querySelector('video');
             if (video) video.pause();
         }
