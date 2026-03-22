@@ -11,7 +11,6 @@ function reveal() {
         }
     }
 }
-
 window.addEventListener("scroll", reveal);
 window.addEventListener("load", reveal);
 
@@ -48,16 +47,14 @@ window.addEventListener('resize', function () {
 // PAUSA AUTOMÁTICA DE VÍDEOS
 // ===========================
 window.addEventListener('load', function () {
-    var videos = document.querySelectorAll('video');
-    videos.forEach(function (video) {
-        video.addEventListener('play', function () {
-            videos.forEach(function (outro) {
-                if (outro !== video && !outro.paused) {
-                    outro.pause();
-                }
-            });
+    document.addEventListener('play', function (e) {
+        var videos = document.querySelectorAll('video');
+        videos.forEach(function (video) {
+            if (video !== e.target && !video.paused) {
+                video.pause();
+            }
         });
-    });
+    }, true);
 });
 
 // ===========================
@@ -72,15 +69,25 @@ function filterGallery(category, btn) {
 
     // Filtra itens
     document.querySelectorAll('.portfolio-item').forEach(function (item) {
-        var cat = item.getAttribute('data-category');
-        var mostrar = category === 'all' || cat === category || cat.includes(category);
+        var cat = item.getAttribute('data-category') || '';
+        var mostrar = category === 'all' || cat === category || cat.split(' ').indexOf(category) !== -1;
 
         if (mostrar) {
             item.style.display = '';
         } else {
             item.style.display = 'none';
             var video = item.querySelector('video');
-            if (video) video.pause();
+            if (video && !video.paused) video.pause();
         }
     });
 }
+
+// Garante que os filtros funcionam após o DOM carregar
+window.addEventListener('load', function () {
+    document.querySelectorAll('.filtro-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var category = this.getAttribute('data-filter');
+            filterGallery(category, this);
+        });
+    });
+});
