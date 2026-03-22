@@ -5,13 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ananda Lima | Publicidade & Conteúdo</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Fontes Premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Plus+Jakarta+Sans:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Ícones e Frameworks -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -22,42 +18,40 @@
     </a>
 
     <!-- Navegação -->
-    <nav class="fixed top-0 w-full z-50 px-6 py-4 md:px-12 flex justify-between items-center bg-[#FAF9F6]/80 backdrop-blur-md">
-        <div class="font-signature text-4xl select-none">Ananda Lima</div>
+    <nav class="nav">
+        <div class="nav__logo">Ananda Lima</div>
 
-        <!-- Menu Desktop -->
-        <div class="hidden md:flex space-x-8 text-[10px] uppercase tracking-widest font-bold">
-            <a href="#home" class="hover:text-[#E8A2A2] transition">Início</a>
-            <a href="#sobre" class="hover:text-[#E8A2A2] transition">Sobre</a>
-            <a href="#servicos" class="hover:text-[#E8A2A2] transition">Serviços</a>
-            <a href="#portfolio" class="hover:text-[#E8A2A2] transition">Portfólio</a>
-            <a href="#contato" class="text-[#E8A2A2]">Contacto</a>
+        <div class="nav__links">
+            <a href="#home" class="nav__link">Início</a>
+            <a href="#sobre" class="nav__link">Sobre</a>
+            <a href="#servicos" class="nav__link">Serviços</a>
+            <a href="#portfolio" class="nav__link">Portfólio</a>
+            <a href="#contato" class="nav__link nav__link--active">Contacto</a>
         </div>
 
-        <!-- Botão Hambúrguer -->
-        <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none z-50">
+        <button id="menu-toggle" class="nav__toggle">
             <i class="fas fa-bars" id="menu-icon"></i>
         </button>
     </nav>
 
     <!-- Menu Mobile -->
-    <div id="mobile-menu" class="fixed top-[68px] left-0 w-full bg-[#FAF9F6]/95 backdrop-blur-md z-40 hidden flex-col items-center py-8 space-y-6 text-[11px] uppercase tracking-widest font-bold shadow-md">
-        <a href="#home" class="hover:text-[#E8A2A2] transition mobile-link">Início</a>
-        <a href="#sobre" class="hover:text-[#E8A2A2] transition mobile-link">Sobre</a>
-        <a href="#servicos" class="hover:text-[#E8A2A2] transition mobile-link">Serviços</a>
-        <a href="#portfolio" class="hover:text-[#E8A2A2] transition mobile-link">Portfólio</a>
-        <a href="#contato" class="text-[#E8A2A2] mobile-link">Contacto</a>
+    <div id="mobile-menu" class="mobile-menu">
+        <a href="#home" class="mobile-menu__link mobile-link">Início</a>
+        <a href="#sobre" class="mobile-menu__link mobile-link">Sobre</a>
+        <a href="#servicos" class="mobile-menu__link mobile-link">Serviços</a>
+        <a href="#portfolio" class="mobile-menu__link mobile-link">Portfólio</a>
+        <a href="#contato" class="mobile-menu__link mobile-menu__link--active mobile-link">Contacto</a>
     </div>
 
     <!-- 1. HOME -->
-    <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center px-6">
-        <div class="reveal active">
-            <p class="text-[10px] uppercase tracking-[0.4em] text-gray-400 mb-4 font-bold">Criadora de Conteúdo & Social Media</p>
-            <h1 class="font-serif text-5xl md:text-8xl text-[#2D3A30] leading-tight mb-8">
-                Transformando ideias em <br> 
-                <span class="italic font-normal">presença digital</span> estratégica.
+    <section id="home" class="section-home">
+        <div class="reveal active home__content">
+            <p class="home__subtitle">Criadora de Conteúdo & Social Media</p>
+            <h1 class="home__title">
+                Transformando ideias em <br>
+                <span class="home__title-italic">presença digital</span> estratégica.
             </h1>
-            <div class="flex flex-col md:flex-row gap-4 justify-center mt-4">
+            <div class="home__buttons">
                 <a href="#portfolio" class="btn-primary">Ver trabalhos</a>
                 <a href="#contato" class="btn-secondary">Falar comigo</a>
             </div>
@@ -65,56 +59,53 @@
     </section>
 
     <!-- 2. SOBRE -->
-    <section id="sobre" class="py-24 px-6 md:px-24 bg-white">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <section id="sobre" class="section-sobre">
+        <div class="sobre__container">
             <div class="reveal">
-                <div class="aspect-[4/5] bg-[#F5F2ED] rounded-sm overflow-hidden relative">
-                    <div class="absolute inset-0 flex items-center justify-center text-gray-300 italic font-serif">A tua foto aqui</div>
+                <div class="sobre__foto-wrap">
+                    <div class="sobre__foto-placeholder">A tua foto aqui</div>
                 </div>
             </div>
-            <div class="reveal">
-                <h2 class="text-[#E8A2A2] font-bold uppercase text-xs tracking-widest mb-4">Sobre Mim</h2>
-                <p class="text-2xl md:text-3xl font-serif text-[#2D3A30] leading-relaxed mb-6">
-                    Sou estudante de <span class="font-bold italic">Publicidade e Propaganda</span> e atuo com criação de conteúdo e gestão de redes sociais.
+            <div class="reveal sobre__texto">
+                <h2 class="section-label">Sobre Mim</h2>
+                <p class="sobre__destaque">
+                    Sou estudante de <span class="sobre__destaque-bold">Publicidade e Propaganda</span> e atuo com criação de conteúdo e gestão de redes sociais.
                 </p>
-                <p class="text-gray-500 leading-loose mb-8 text-sm md:text-base">
+                <p class="sobre__descricao">
                     Desenvolvo projetos em diferentes nichos e exploro estratégias que conectam marcas ao seu público de forma autêntica e memorável. Atualmente focada em elevar o patamar visual de marcas fitness e lifestyle.
                 </p>
-                <div class="flex space-x-6 text-xl text-[#2D3A30]">
-                    <a href="#" class="hover:text-[#E8A2A2] transition"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="hover:text-[#E8A2A2] transition"><i class="fab fa-linkedin"></i></a>
+                <div class="sobre__sociais">
+                    <a href="#" class="sobre__social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="sobre__social-link"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 3. SERVIÇOS -->
-    <section id="servicos" class="py-24 px-6 md:px-24 bg-[#2D3A30] text-white">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="font-serif text-4xl mb-16 text-center italic text-[#E8A2A2]">A página que vende</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <!-- Social Media -->
-                <div class="reveal border-t border-white/10 pt-8">
-                    <h4 class="font-bold uppercase tracking-widest text-xs mb-6 text-[#E8A2A2]">01. Social Media</h4>
-                    <ul class="space-y-4 opacity-70 text-sm">
+    <section id="servicos" class="section-servicos">
+        <div class="servicos__container">
+            <h2 class="servicos__titulo">A página que vende</h2>
+            <div class="servicos__grid">
+                <div class="reveal servico-card">
+                    <h4 class="servico-card__titulo">01. Social Media</h4>
+                    <ul class="servico-card__lista">
                         <li>• Gestão de Redes</li>
                         <li>• Planeamento Editorial</li>
                         <li>• Calendário de Conteúdo</li>
                     </ul>
                 </div>
-                <!-- Conteúdo -->
-                <div class="reveal border-t border-white/10 pt-8">
-                    <h4 class="font-bold uppercase tracking-widest text-xs mb-6 text-[#E8A2A2]">02. Conteúdo</h4>
-                    <ul class="space-y-4 opacity-70 text-sm">
+                <div class="reveal servico-card">
+                    <h4 class="servico-card__titulo">02. Conteúdo</h4>
+                    <ul class="servico-card__lista">
                         <li>• Reels & Vídeos Curtos</li>
                         <li>• Stories Narrativos</li>
                         <li>• Cobertura de Eventos</li>
                     </ul>
                 </div>
-                <!-- Estratégia -->
-                <div class="reveal border-t border-white/10 pt-8">
-                    <h4 class="font-bold uppercase tracking-widest text-xs mb-6 text-[#E8A2A2]">03. Estratégia</h4>
-                    <ul class="space-y-4 opacity-70 text-sm">
+                <div class="reveal servico-card">
+                    <h4 class="servico-card__titulo">03. Estratégia</h4>
+                    <ul class="servico-card__lista">
                         <li>• Ideias de Conteúdo</li>
                         <li>• Posicionamento Visual</li>
                         <li>• Consultoria de Marca</li>
@@ -124,84 +115,80 @@
         </div>
     </section>
 
-    <!-- 4. PORTFÓLIO & 5. CASES -->
-    <section id="portfolio" class="py-24 px-6 md:px-24">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="font-serif text-4xl mb-16 text-center">O Coração do Site</h2>
-            
-            <div class="grid grid-cols-1 gap-20">
-                <!-- Case Study 1 -->
-                <div class="project-card flex flex-col md:flex-row overflow-hidden reveal">
-                    <div class="w-full md:w-1/2 bg-zinc-100 aspect-video flex items-center justify-center">
-                        <i class="fas fa-play text-4xl text-[#E8A2A2]"></i>
+    <!-- 4. PORTFÓLIO -->
+    <section id="portfolio" class="section-portfolio">
+        <div class="portfolio__container">
+            <h2 class="portfolio__titulo">O Coração do Site</h2>
+            <div class="portfolio__lista">
+
+                <!-- Case Study -->
+                <div class="project-card reveal">
+                    <div class="project-card__media">
+                        <i class="fas fa-play project-card__icon"></i>
                     </div>
-                    <div class="w-full md:w-1/2 p-8 md:p-12">
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-[#E8A2A2] mb-4 block">Case: Audiovisual</span>
-                        <h3 class="text-3xl font-serif mb-6 text-[#2D3A30]">Cobertura de Corrida</h3>
-                        <div class="space-y-6 text-sm text-gray-500 italic">
+                    <div class="project-card__info">
+                        <span class="project-card__tag">Case: Audiovisual</span>
+                        <h3 class="project-card__nome">Cobertura de Corrida</h3>
+                        <div class="project-card__detalhes">
                             <p><strong>Objetivo:</strong> Engajamento em tempo real.</p>
                             <p><strong>Estratégia:</strong> Vídeos dinâmicos + stories contínuos.</p>
-                            <p class="text-[#2D3A30] font-bold"><strong>Resultado:</strong> Aumento orgânico de interação.</p>
+                            <p class="project-card__resultado"><strong>Resultado:</strong> Aumento orgânico de interação.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Galeria Rápida -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
-                    <div class="aspect-square bg-white border border-gray-100 flex items-center justify-center text-[10px] uppercase font-bold text-gray-300 p-2 text-center">Reels Produzido</div>
-                    <div class="aspect-square bg-white border border-gray-100 flex items-center justify-center text-[10px] uppercase font-bold text-gray-300 p-2 text-center">Stories Narrativos</div>
-                    <div class="aspect-square bg-white border border-gray-100 flex items-center justify-center text-[10px] uppercase font-bold text-gray-300 p-2 text-center">Post Carrossel</div>
-                    <div class="aspect-square bg-white border border-gray-100 flex items-center justify-center text-[10px] uppercase font-bold text-gray-300 p-2 text-center">Feed Estético</div>
+                <!-- Galeria -->
+                <div class="galeria reveal">
+                    <div class="galeria__item">Reels Produzido</div>
+                    <div class="galeria__item">Stories Narrativos</div>
+                    <div class="galeria__item">Post Carrossel</div>
+                    <div class="galeria__item">Feed Estético</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. DIFERENCIAL -->
+    <section class="section-diferencial">
+        <div class="diferencial__container reveal">
+            <h2 class="section-label diferencial__label">Por que eu?</h2>
+            <div class="diferencial__grid">
+                <div class="diferencial__item">
+                    <h4 class="diferencial__nome">Olhar Híbrido</h4>
+                    <p class="diferencial__desc">Criativo + Estratégico</p>
+                </div>
+                <div class="diferencial__item">
+                    <h4 class="diferencial__nome">Trends</h4>
+                    <p class="diferencial__desc">Adaptação em tempo real</p>
+                </div>
+                <div class="diferencial__item">
+                    <h4 class="diferencial__nome">Prática</h4>
+                    <p class="diferencial__desc">Experiência em campo</p>
+                </div>
+                <div class="diferencial__item">
+                    <h4 class="diferencial__nome">Nicho</h4>
+                    <p class="diferencial__desc">Versatilidade absoluta</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. DIFERENCIAL -->
-    <section class="py-24 px-6 md:px-24 bg-[#F5F2ED]">
-        <div class="max-w-5xl mx-auto text-center reveal">
-            <h2 class="text-[10px] uppercase tracking-widest font-bold text-[#E8A2A2] mb-12">Por que eu?</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-                <div class="space-y-3">
-                    <h4 class="font-bold text-sm">Olhar Híbrido</h4>
-                    <p class="text-xs text-gray-400">Criativo + Estratégico</p>
-                </div>
-                <div class="space-y-3">
-                    <h4 class="font-bold text-sm">Trends</h4>
-                    <p class="text-xs text-gray-400">Adaptação em tempo real</p>
-                </div>
-                <div class="space-y-3">
-                    <h4 class="font-bold text-sm">Prática</h4>
-                    <p class="text-xs text-gray-400">Experiência em campo</p>
-                </div>
-                <div class="space-y-3">
-                    <h4 class="font-bold text-sm">Nicho</h4>
-                    <p class="text-xs text-gray-400">Versatilidade absoluta</p>
-                </div>
+    <!-- 6. FOOTER / CONTACTO -->
+    <footer id="contato" class="footer">
+        <div class="reveal footer__content">
+            <h2 class="footer__nome">Ananda Lima</h2>
+            <p class="footer__cta">Vamos elevar a tua marca?</p>
+            <div class="footer__contatos">
+                <a href="mailto:anandamanu.pp@gmail.com" class="footer__email">anandamanu.pp@gmail.com</a>
+                <p class="footer__cidade">Salvador, BA</p>
             </div>
-        </div>
-    </section>
-
-    <!-- 7. CONTACTO (FOOTER) -->
-    <footer id="contato" class="py-24 px-6 bg-[#1A1A1A] text-white text-center">
-        <div class="reveal">
-            <h2 class="font-signature text-6xl mb-4">Ananda Lima</h2>
-            <p class="font-serif text-2xl md:text-3xl mb-12 italic opacity-80">Vamos elevar a tua marca?</p>
-            
-            <div class="flex flex-col space-y-4 mb-16">
-                <a href="mailto:anandamanu.pp@gmail.com" class="text-base md:text-lg hover:text-[#E8A2A2] transition font-light break-all">anandamanu.pp@gmail.com</a>
-                <p class="text-xs uppercase tracking-[0.5em] opacity-30">Salvador, BA</p>
+            <div class="footer__links">
+                <a href="#" class="footer__link">WhatsApp</a>
+                <a href="#" class="footer__link">Instagram</a>
+                <a href="#" class="footer__link">LinkedIn</a>
             </div>
-
-            <div class="flex justify-center space-x-6 md:space-x-8 text-sm uppercase font-bold tracking-widest flex-wrap gap-y-4">
-                <a href="#" class="hover:text-[#E8A2A2]">WhatsApp</a>
-                <a href="#" class="hover:text-[#E8A2A2]">Instagram</a>
-                <a href="#" class="hover:text-[#E8A2A2]">LinkedIn</a>
-            </div>
-            
-            <div class="mt-20 opacity-10 text-[10px] uppercase tracking-widest">
-                © 2024 Design Editorial & Estratégico
-            </div>
+            <div class="footer__copy">© 2024 Design Editorial & Estratégico</div>
         </div>
     </footer>
 
