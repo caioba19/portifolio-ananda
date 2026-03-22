@@ -12,7 +12,6 @@ function reveal() {
     }
 }
 
-// ✅ Corrigido: usa addEventListener em vez de window.onload
 window.addEventListener("scroll", reveal);
 window.addEventListener("load", reveal);
 
@@ -46,3 +45,52 @@ window.addEventListener('resize', function () {
         menuIcon.classList.remove('fa-xmark');
     }
 });
+
+// ===========================
+// PAUSA AUTOMÁTICA DE VÍDEOS
+// Quando um vídeo começa, pausa todos os outros
+// ===========================
+window.addEventListener('load', function () {
+    var videos = document.querySelectorAll('video');
+
+    videos.forEach(function (video) {
+        // Carrega o primeiro frame visível
+        video.addEventListener('loadedmetadata', function () {
+            video.currentTime = 0.1;
+        });
+
+        // Pausa os outros ao dar play
+        video.addEventListener('play', function () {
+            videos.forEach(function (outro) {
+                if (outro !== video && !outro.paused) {
+                    outro.pause();
+                }
+            });
+        });
+    });
+});
+
+
+// ===========================
+// FILTRO DO PORTFÓLIO
+// ===========================
+function filterGallery(category, btnClicado) {
+    // Atualiza botões
+    document.querySelectorAll('.filtro-btn').forEach(function(btn) {
+        btn.classList.remove('active');
+    });
+    btnClicado.classList.add('active');
+
+    // Filtra itens
+    document.querySelectorAll('.portfolio-item').forEach(function(item) {
+        var itemCategory = item.getAttribute('data-category');
+        if (category === 'all' || itemCategory.includes(category)) {
+            item.classList.remove('hidden');
+        } else {
+            item.classList.add('hidden');
+            // Pausa vídeo ao esconder
+            var video = item.querySelector('video');
+            if (video) video.pause();
+        }
+    });
+}
