@@ -29,7 +29,7 @@ toggle.addEventListener('click', () => {
     menuIcon.classList.toggle('fa-xmark');
 });
 
-// Fecha o menu ao clicar em qualquer link
+// Fecha ao clicar num link
 document.querySelectorAll('.mobile-link').forEach(link => {
     link.addEventListener('click', () => {
         mobileMenu.classList.remove('open');
@@ -38,7 +38,7 @@ document.querySelectorAll('.mobile-link').forEach(link => {
     });
 });
 
-// Fecha o menu ao redimensionar para desktop
+// Fecha ao redimensionar para desktop
 window.addEventListener('resize', () => {
     if (window.innerWidth >= 768) {
         mobileMenu.classList.remove('open');
