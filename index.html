@@ -124,11 +124,11 @@
 
             <!-- Filtros -->
             <div class="filtros">
-                <button class="filtro-btn active" onclick="filterGallery('all', this)">Todos</button>
-                <button class="filtro-btn" onclick="filterGallery('sports', this)">Sports</button>
-                <button class="filtro-btn" onclick="filterGallery('social', this)">Social</button>
-                <button class="filtro-btn" onclick="filterGallery('branding', this)">Business</button>
-                <button class="filtro-btn" onclick="filterGallery('trends', this)">Trends</button>
+                <button class="filtro-btn active" data-filter="all" onclick="filterGallery('all', this)">Todos</button>
+                <button class="filtro-btn" data-filter="sports" onclick="filterGallery('sports', this)">Sports</button>
+                <button class="filtro-btn" data-filter="social" onclick="filterGallery('social', this)">Social</button>
+                <button class="filtro-btn" data-filter="branding" onclick="filterGallery('branding', this)">Business</button>
+                <button class="filtro-btn" data-filter="trends" onclick="filterGallery('trends', this)">Trends</button>
             </div>
 
             <!-- Grade de vídeos -->
@@ -136,7 +136,7 @@
 
                 <div class="portfolio-item sports" data-category="sports">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216440/video1_e1rhxi.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216440/video1_e1rhxi.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216440/video1_e1rhxi.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Sports</span>
                             <h4 class="video-overlay__titulo">Cobertura de Corrida</h4>
@@ -146,7 +146,7 @@
 
                 <div class="portfolio-item sports" data-category="sports">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216438/video2_knzcth.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216438/video2_knzcth.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216438/video2_knzcth.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Sports</span>
                             <h4 class="video-overlay__titulo">Caminhada Coletiva</h4>
@@ -156,7 +156,7 @@
 
                 <div class="portfolio-item social" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216437/video3_now89l.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216437/video3_now89l.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216437/video3_now89l.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Eventos</span>
                             <h4 class="video-overlay__titulo">Confraternização Corporativa</h4>
@@ -166,7 +166,7 @@
 
                 <div class="portfolio-item social" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216441/video4_mnsnkv.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216441/video4_mnsnkv.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216441/video4_mnsnkv.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Cobertura de Aniversário</h4>
@@ -176,7 +176,7 @@
 
                 <div class="portfolio-item social" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216440/video5_jbcxnc.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216440/video5_jbcxnc.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216440/video5_jbcxnc.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Formatura</h4>
@@ -186,7 +186,7 @@
 
                 <div class="portfolio-item branding" data-category="branding">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216444/video6_fz8l6q.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216444/video6_fz8l6q.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216444/video6_fz8l6q.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Business</span>
                             <h4 class="video-overlay__titulo">Depoimentos de Clientes</h4>
@@ -196,7 +196,7 @@
 
                 <div class="portfolio-item branding" data-category="branding">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216444/video7_tism8h.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216444/video7_tism8h.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216444/video7_tism8h.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Business</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -206,7 +206,7 @@
 
                 <div class="portfolio-item trends" data-category="trends">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216445/video8_hnppvz.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216445/video8_hnppvz.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216445/video8_hnppvz.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Trends</span>
                             <h4 class="video-overlay__titulo">Trends do Momento</h4>
@@ -216,7 +216,7 @@
 
                 <div class="portfolio-item trends sports" data-category="trends">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216445/video9_fjkiou.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216445/video9_fjkiou.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216445/video9_fjkiou.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Sports / Trends</span>
                             <h4 class="video-overlay__titulo">Trend de Corrida</h4>
@@ -226,7 +226,7 @@
 
                 <div class="portfolio-item trends" data-category="trends">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216454/video10_tvgexc.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216454/video10_tvgexc.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216454/video10_tvgexc.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Trends</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -236,7 +236,7 @@
 
                 <div class="portfolio-item" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216453/video11_mbbtqr.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216453/video11_mbbtqr.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216453/video11_mbbtqr.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -246,7 +246,7 @@
 
                 <div class="portfolio-item" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216447/video12_bd8nlf.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216447/video12_bd8nlf.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216447/video12_bd8nlf.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -256,7 +256,7 @@
 
                 <div class="portfolio-item" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216447/video13_xosoty.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216447/video13_xosoty.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216447/video13_xosoty.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -266,7 +266,7 @@
 
                 <div class="portfolio-item" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216411/video14_o10iq3.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216411/video14_o10iq3.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216411/video14_o10iq3.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -276,7 +276,7 @@
 
                 <div class="portfolio-item" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216419/video15_cnswlr.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216419/video15_cnswlr.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216419/video15_cnswlr.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -286,7 +286,7 @@
 
                 <div class="portfolio-item" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216414/video16_aodwyp.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216414/video16_aodwyp.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216414/video16_aodwyp.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -296,7 +296,7 @@
 
                 <div class="portfolio-item" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216409/video17_eujrxs.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216409/video17_eujrxs.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216409/video17_eujrxs.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -306,7 +306,7 @@
 
                 <div class="portfolio-item" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216438/video_18_tvh2uw.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216438/video_18_tvh2uw.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216438/video_18_tvh2uw.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -316,7 +316,7 @@
 
                 <div class="portfolio-item" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216418/video19_fsy2rs.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216418/video19_fsy2rs.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216418/video19_fsy2rs.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -326,7 +326,7 @@
 
                 <div class="portfolio-item" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216417/video20_mbvlkq.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216417/video20_mbvlkq.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216417/video20_mbvlkq.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -336,7 +336,7 @@
 
                 <div class="portfolio-item" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216417/video21_nq3poz.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216417/video21_nq3poz.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216417/video21_nq3poz.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -346,7 +346,7 @@
 
                 <div class="portfolio-item" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216421/video22_cnaf3j.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216421/video22_cnaf3j.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216421/video22_cnaf3j.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -356,7 +356,7 @@
 
                 <div class="portfolio-item" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216420/video23_gjyj8d.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216420/video23_gjyj8d.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216420/video23_gjyj8d.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -366,7 +366,7 @@
 
                 <div class="portfolio-item" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216419/video24_eaiszm.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216419/video24_eaiszm.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216419/video24_eaiszm.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -376,7 +376,7 @@
 
                 <div class="portfolio-item" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216417/video25_nbcf5m.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216417/video25_nbcf5m.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216417/video25_nbcf5m.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -386,7 +386,7 @@
 
                 <div class="portfolio-item" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216422/video26_z16omj.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216422/video26_z16omj.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216422/video26_z16omj.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -396,7 +396,7 @@
 
                 <div class="portfolio-item" data-category="social">
                     <div class="video-container">
-                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216426/video27_mo9c1d.mp4" controls playsinline preload="none"></video>
+                        <video src="https://res.cloudinary.com/dwwttehi2/video/upload/v1774216426/video27_mo9c1d.mp4" poster="https://res.cloudinary.com/dwwttehi2/video/upload/so_0/v1774216426/video27_mo9c1d.jpg" controls playsinline preload="none"></video>
                         <div class="video-overlay">
                             <span class="video-overlay__tag">Social</span>
                             <h4 class="video-overlay__titulo">Título do Vídeo</h4>
@@ -439,7 +439,7 @@
             <h2 class="footer__nome">Ananda Lima</h2>
             <p class="footer__cta">Vamos elevar a tua marca?</p>
             <div class="footer__contatos">
-                <a href="/cdn-cgi/l/email-protection#e78689868983868a868992c99797a7808a868e8bc984888a" class="footer__email"><span class="__cf_email__" data-cfemail="066768676862676b67687328767646616b676f6a2865696b">[email&#160;protected]</span></a>
+                <a href="mailto:anandamanu.pp@gmail.com" class="footer__email">anandamanu.pp@gmail.com</a>
                 <p class="footer__cidade">Salvador, BA</p>
             </div>
             <div class="footer__links">
@@ -447,4 +447,10 @@
                 <a href="https://www.instagram.com/nandalima.pp/" target="_blank" class="footer__link">Instagram</a>
                 <a href="#" class="footer__link">LinkedIn</a>
             </div>
-            <div class="
+            <div class="footer__copy">© 2024 Design Editorial & Estratégico</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
