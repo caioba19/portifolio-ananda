@@ -957,23 +957,6 @@ img {
 }
 
 /* ===========================
-   PORTFÓLIO — CATEGORIAS
-=========================== */
-.portfolio__categoria {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--soft-pink);
-}
-
-.portfolio__categoria-titulo {
-    font-family: var(--font-serif);
-    font-size: 1.5rem;
-    font-style: italic;
-    color: var(--moss-green);
-}
-
-/* ===========================
    PORTFÓLIO — GRID DE VÍDEOS POR CATEGORIA
 =========================== */
 .portfolio__categoria {

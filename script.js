@@ -11,6 +11,7 @@ function reveal() {
         }
     }
 }
+
 window.addEventListener("scroll", reveal);
 window.addEventListener("load", reveal);
 
@@ -27,6 +28,7 @@ toggle.addEventListener('click', function () {
     menuIcon.classList.toggle('fa-xmark');
 });
 
+// Fecha ao clicar num link
 document.querySelectorAll('.mobile-link').forEach(function (link) {
     link.addEventListener('click', function () {
         mobileMenu.classList.remove('open');
@@ -35,6 +37,7 @@ document.querySelectorAll('.mobile-link').forEach(function (link) {
     });
 });
 
+// Fecha ao redimensionar para desktop
 window.addEventListener('resize', function () {
     if (window.innerWidth >= 768) {
         mobileMenu.classList.remove('open');
@@ -45,49 +48,49 @@ window.addEventListener('resize', function () {
 
 // ===========================
 // PAUSA AUTOMÁTICA DE VÍDEOS
+// Quando um vídeo começa, pausa todos os outros
 // ===========================
 window.addEventListener('load', function () {
-    document.addEventListener('play', function (e) {
-        var videos = document.querySelectorAll('video');
-        videos.forEach(function (video) {
-            if (video !== e.target && !video.paused) {
-                video.pause();
-            }
+    var videos = document.querySelectorAll('video');
+
+    videos.forEach(function (video) {
+        // Carrega o primeiro frame visível
+        video.addEventListener('loadedmetadata', function () {
+            video.currentTime = 0.1;
         });
-    }, true);
+
+        // Pausa os outros ao dar play
+        video.addEventListener('play', function () {
+            videos.forEach(function (outro) {
+                if (outro !== video && !outro.paused) {
+                    outro.pause();
+                }
+            });
+        });
+    });
 });
+
 
 // ===========================
 // FILTRO DO PORTFÓLIO
 // ===========================
-function filterGallery(category, btn) {
+function filterGallery(category, btnClicado) {
     // Atualiza botões
-    document.querySelectorAll('.filtro-btn').forEach(function (b) {
-        b.classList.remove('active');
+    document.querySelectorAll('.filtro-btn').forEach(function(btn) {
+        btn.classList.remove('active');
     });
-    btn.classList.add('active');
+    btnClicado.classList.add('active');
 
     // Filtra itens
-    document.querySelectorAll('.portfolio-item').forEach(function (item) {
-        var cat = item.getAttribute('data-category') || '';
-        var mostrar = category === 'all' || cat === category || cat.split(' ').indexOf(category) !== -1;
-
-        if (mostrar) {
-            item.style.display = '';
+    document.querySelectorAll('.portfolio-item').forEach(function(item) {
+        var itemCategory = item.getAttribute('data-category');
+        if (category === 'all' || (itemCategory && itemCategory.toLowerCase().includes(category.toLowerCase()))) {
+            item.classList.remove('hidden');
         } else {
-            item.style.display = 'none';
+            item.classList.add('hidden');
+            // Pausa vídeo ao esconder
             var video = item.querySelector('video');
-            if (video && !video.paused) video.pause();
+            if (video) video.pause();
         }
     });
 }
-
-// Garante que os filtros funcionam após o DOM carregar
-window.addEventListener('load', function () {
-    document.querySelectorAll('.filtro-btn').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            var category = this.getAttribute('data-filter');
-            filterGallery(category, this);
-        });
-    });
-});
