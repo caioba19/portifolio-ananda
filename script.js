@@ -66,12 +66,12 @@ window.addEventListener('load', function () {
 // FILTRO DO PORTFÓLIO
 // ===========================
 function filterGallery(category, btnClicado) {
-    document.querySelectorAll('.filtro-btn').forEach(function(btn) {
+    document.querySelectorAll('.filtro-btn').forEach(function (btn) {
         btn.classList.remove('active');
     });
     btnClicado.classList.add('active');
 
-    document.querySelectorAll('.portfolio-item').forEach(function(item) {
+    document.querySelectorAll('.portfolio-item').forEach(function (item) {
         var itemCategory = item.getAttribute('data-category');
         if (category === 'all' || (itemCategory && itemCategory.toLowerCase().includes(category.toLowerCase()))) {
             item.classList.remove('hidden');
@@ -84,3 +84,9 @@ function filterGallery(category, btnClicado) {
         }
     });
 }
+
+// Aplica filtro inicial ao carregar a página
+window.addEventListener('load', function () {
+    var btnInicial = document.querySelector('.filtro-btn[data-filter="cobertura"]');
+    if (btnInicial) filterGallery('cobertura', btnInicial);
+});
